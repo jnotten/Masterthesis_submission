@@ -166,7 +166,7 @@ class Decisiontree:
             n = numberFeatures
             choice = [i for i in range(numberFeatures)]
         elif self.max_features == 'log':
-            n = math.ceil(math.log2(numberFeatures))
+            n = math.ceil(math.log2(numberFeatures)+1)
             choice = np.random.choice([i for i in range(numberFeatures)], size=n, replace=False, p=self.weight_features)
 
         # Now we initialize our return variable.
@@ -228,7 +228,7 @@ class Decisiontree:
             n = numberFeatures
             choice = [i for i in range(numberFeatures)]
         elif self.max_features == 'log':
-            n = math.ceil(math.log2(numberFeatures))
+            n = math.ceil(math.log2(numberFeatures)+1)
             choice = np.random.choice([i for i in range(numberFeatures)], size=n, replace=False, p=self.weight_features)
 
         # Now we initialize our return variable.
@@ -294,7 +294,7 @@ class Decisiontree:
             n = numberFeatures
             choice = [i for i in range(numberFeatures)]
         elif self.max_features == 'log':
-            n = math.ceil(math.log2(numberFeatures))
+            n = math.ceil(math.log2(numberFeatures)+1)
             choice = np.random.choice([i for i in range(numberFeatures)], size=n, replace=False, p=self.weight_features)
 
         # Now we initialize our return variable.
